@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ablogApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
+    <title>Arshavin</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerLayout" ng-controller="navController">
+            <nav>
+                <ul ng-repeat="item in menuItems">
+                    <li>
+                        <a href="{{item.path}}">{{item.name}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div ng-view class="contents"></div>
+    </div>
+</body>
+</html>
